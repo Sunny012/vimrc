@@ -1,0 +1,9 @@
+#######################################################################
+# auther : wwz
+# time   : 2018/05/11/13:50:52
+# version: v1.0
+# brief  : Thie file provided an simple and useful configuration for your vim tool.
+#######################################################################
+Fixed problems:
+1.Basically complete the configuration of vim,and commit the config file.
+

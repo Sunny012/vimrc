@@ -7,10 +7,11 @@
 #!/bin/bash
 
 function Install_Vundle(){
-    vim_Path=~/.vim/bundle
+    vim_Path=~/.vim/bundle/Vundle.vim
     if [ ! -d $vim_Path ];then
-        sudo mkdir -p $vim_Path;
+        mkdir -p $vim_Path;
         echo -e "\033 41;37;5m the .vim path has been created! \033[0m";
+		exit 1
     fi
     git clone https://github.com/VundleVim/Vundle.vim.git $vim_Path
 }
@@ -19,21 +20,22 @@ function Install_Ripgrep(){
     curl -LO https://github.com/BurntSushi/ripgrep/releases/download/0.8.1/ripgrep_0.8.1_amd64.deb
     sudo dpkg -i ripgrep_0.8.1_amd64.deb
     if [ $? -ne 0 ];then
-        echo -e "\033 41;37;ripgrep plugin installed! \033[0m";	
+        echo -e "\033 41;37;5m ripgrep plugin installed failed! \033[0m";	
     fi
-
+	echo -e "\033 41;37;5m ripgrep plugin installed successfully! \033[0m";	
 }
 
 function Config_VimrcFile(){
 
-    if [ ! -f ~/.vimrc ];then
-        cp ./vimrc ~/vimrc
+    if [ -f ~/.vimrc ];then
+    	rm -f ~/.vimrc   
     fi
-    sudo mv ~/vimrc ~/.vimrc
+	cp ./vimrc ~/.vimrc
 }
 
 ##### start here#######
 Install_Vundle
 Config_VimrcFile
+Install_Ripgrep
 vim
 

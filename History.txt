@@ -1,3 +1,11 @@
+#######################################################################
+# auther : wwz
+# time   : 2018/07/25/17:58
+# version: v1.2
+# brief  : Thie file provided an simple and useful configuration for your vim tool.
+#######################################################################
+Fixed problems:
+1.modify the AutoCfgVimrc.sh so that use it more conveniently.
 
 #######################################################################
 # auther : wwz

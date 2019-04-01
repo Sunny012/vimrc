@@ -99,8 +99,11 @@ set shiftwidth=4
 set cursorline                    "highlight the current line
 set cursorcolumn                  "high the current lumn
 
-set lines=50
-set columns=140
+
+"">>>wwz-start190401   -Del
+""set lines=50     Delete them because it could cause my interface messy in ALiYun linux server
+""set columns=140
+""<<<wwz-end
 
 set backspace=indent,eol,start
 

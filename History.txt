@@ -1,3 +1,14 @@
+
+#######################################################################
+# auther : wwz
+# time   : 2019/04/01/12:14
+# version: v1.2
+# brief  : Thie file provided an simple and useful configuration for your vim tool.
+#######################################################################
+Fixed problems:
+1.deltete "set lines=50" and "set columns=140" setting to fixed In order to solve the problem of showing chaos.
+
+
 #######################################################################
 # auther : wwz
 # time   : 2018/07/25/17:58
@@ -7,6 +18,7 @@
 Fixed problems:
 1.modify the AutoCfgVimrc.sh so that use it more conveniently.
 
+
 #######################################################################
 # auther : wwz
 # time   : 2018/05/2/17:58
@@ -15,7 +27,6 @@ Fixed problems:
 #######################################################################
 Fixed problems:
 1.add the script that help user to install plugin vundle and config vim
-
 
 
 #######################################################################

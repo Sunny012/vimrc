@@ -14,7 +14,8 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Bundle 'VundleVim/Vundle.vim'
-Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'vim-scripts/OmniCppComplete'
+Plugin 'dyng/ctrlsf.vim'
 
 Bundle 'https://github.com/vim-airline/vim-airline.git'
 Bundle 'vim-airline/vim-airline-themes'
@@ -57,6 +58,21 @@ map <F2> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 autocmd BufEnter * if 0 == len(filter(range(1, winnr('$')), 'empty(getbufvar(winbufnr(v:val), "&bt"))')) | qa! | endif
 
+"##################### CtrlSf ##################"
+"let g:ctrlsf_ackprg = ''
+let g:ctrlsf_position = "right"
+nmap <S-F> <Plug>CtrlSFPrompt -R -I '<c-r><c-w>' ./
+let g:ctrlsf_auto_preview = 1
+nmap <C-F> /<c-r><c-w>
+
+let g:ctrlsf_search_mode = 'async'
+let g:ctrlsf_winsize = '30%'
+
+let g:ctrlsf_mapping = {
+         \ "popen": "e",
+         \ "popenf": "e",
+         \ }
+
 "######################  TagBar&Ctags&Cscope Set ########################"
 nnoremap <F3> :TagbarToggle<CR>
 let g:tagbar_width=30   
@@ -81,11 +97,11 @@ nnoremap j h
 
 syntax on                     "Syntax Highlight
 
-set foldenable                    "Enable fold
-set foldmethod=manual  
-set nowrap                        "forbid code fold
-set foldmethod=indent
-set foldmethod=syntax    
+"set foldenable                    "Enable fold
+"set foldmethod=manual  
+"set nowrap                        "forbid code fold
+"set foldmethod=indent
+"set foldmethod=syntax    
 
 set autoindent                    "set automatically indent
 set cindent
@@ -99,6 +115,7 @@ set shiftwidth=4
 set cursorline                    "highlight the current line
 set cursorcolumn                  "high the current lumn
 
+set nocp
 
 "">>>wwz-start190401   -Del
 ""set lines=50     Delete them because it could cause my interface messy in ALiYun linux server

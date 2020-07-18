@@ -33,9 +33,14 @@ function Config_VimrcFile(){
 	cp ./vimrc ~/.vimrc
 }
 
+function Install_Ag(){
+    apt-get install silversearcher-ag
+}
+
 ##### start here#######
 Install_Vundle
 Config_VimrcFile
 Install_Ripgrep
+Install_Ag
 vim
 
